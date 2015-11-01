@@ -5,11 +5,13 @@ api_version: 1
 threadsafe: true
 
 handlers:
+# javascripts
 - url: /(.*\.js)
   mime_type: text/javascript
   static_files: static/\1
   upload: static/(.*\.js)
 
+# css
 - url: /(.*\.css)
   mime_type: text/css
   static_files: static/\1
@@ -22,11 +24,33 @@ handlers:
 
 # font-awesome
 - url: /(.*\.(woff|ttf))
+  mime_type: application/font-woff2
   static_files: static/\1
   upload: static/(.*\.(woff|ttf))
 
 - url: .*
   script: cabbuddy.wsgi.application
+
+skip_files:
+- ^(.*/)?#.*#
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?.*\.bak$
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*~
+- ^(.*/)?Icon\r
+- ^(.*/)?\..*
+- ^(.*/)?app\.yaml
+- ^(.*/)?app\.yml
+- ^(.*/)?index\.yaml
+- ^(.*/)?index\.yml
+- ^lib/.*
+- ^static/dev/.*
+- ^static/ext/.*\.coffee
+- ^static/ext/.*\.css
+- ^static/ext/.*\.js
+- ^static/ext/.*\.less
+- ^static/ext/.*\.json
+- ^static/src/.*
 
 libraries:
 - name: django
@@ -34,4 +58,3 @@ libraries:
 
 - name: MySQLdb
   version: "latest"
-

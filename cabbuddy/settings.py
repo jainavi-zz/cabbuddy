@@ -49,6 +49,8 @@ USE_L10N = True
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
 
+ROOT_PATH = os.path.dirname(__file__)
+
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
 MEDIA_ROOT = ''
@@ -103,8 +105,6 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_PATH = os.path.dirname(__file__)
-
 ROOT_URLCONF = 'cabbuddy.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
@@ -119,6 +119,7 @@ TEMPLATE_DIRS = (
 
 INSTALLED_APPS = (
     'app',
+    'django.contrib.staticfiles',
 )
 
 # A sample logging configuration. The only tangible logging
