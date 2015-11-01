@@ -11,6 +11,11 @@ handlers:
   static_files: static/\1
   upload: static/(.*\.js)
 
+# min-map
+- url: /(.*\.map)
+  static_files: static/\1
+  upload: static/(.*\.map)
+
 # css
 - url: /(.*\.css)
   mime_type: text/css
