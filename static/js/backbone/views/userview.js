@@ -5,7 +5,6 @@ jQuery(function() {
 	        console.log('Login View Initialized');
 	    },
 		render: function() {
-			console.log('Yahoo!');	
 			this.$el.html ('CONTENT SHOULD SHOW HERE');
 		}
 	});

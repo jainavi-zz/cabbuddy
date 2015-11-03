@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="#page-top">CabBuddy</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -70,6 +70,9 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
+                    <li>
+                        <a class="sign-in" href="#" onclick="loadSigninDialog()">Sign in</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -81,9 +84,9 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Welcome To Our Studio!</div>
+                <div class="intro-lead-in">Welcome To CabBuddy!</div>
                 <div class="intro-heading">It's Nice To Meet You</div>
-                <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
+                <a href="#services" class="page-scroll btn btn-xl">Find your CabBuddy</a>
             </div>
         </div>
     </header>
@@ -640,6 +643,21 @@
         </div>
     </div>
 
+    <!-- sign in modal-->
+    <div id="signin-modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- dialog body -->
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    Please sign in!
+                </div>
+                <!-- dialog buttons -->
+                <div class="modal-footer"><button type="button" class="btn btn-primary">OK</button></div>
+            </div>
+        </div>
+    </div>
+
     <!-- load javascripts here-->
 
     <!-- jQuery -->
@@ -664,8 +682,9 @@
     <script src="vendor/js/underscore-min.js"></script>
     <script src="vendor/js/backbone-min.js"></script>
 
-    <script type="text/javascript" src="js/backbone/views/userview.js"></script> 
-    <script type="text/javascript" src="js/backbone/routes.js"></script> 
+    <script type="text/javascript" src="js/backbone/views/userview.js"></script>
+    <script type="text/javascript" src="js/backbone/routes.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 
 </body>
 
