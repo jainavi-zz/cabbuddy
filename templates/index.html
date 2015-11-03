@@ -40,7 +40,7 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -50,7 +50,7 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
                         <a href="#page-top"></a>
@@ -71,7 +71,7 @@
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                     <li>
-                        <a class="sign-in" href="#" onclick="loadSigninDialog()">Sign in</a>
+                        <a id="sign-in" href="#">Sign in</a>
                     </li>
                 </ul>
             </div>
@@ -649,11 +649,28 @@
             <div class="modal-content">
                 <!-- dialog body -->
                 <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    Please sign in!
+                    <form>
+                      <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control cb-form-input" id="email" placeholder="Email">
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control cb-form-input" id="password" placeholder="Password">
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Remember me
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-primary btn-cb">Sign in</button>
+                    </form>
                 </div>
-                <!-- dialog buttons -->
-                <div class="modal-footer"><button type="button" class="btn btn-primary">OK</button></div>
+                <div class="modal-footer">
+                    <div class="signin-modal-footer">
+                        <a id="forgot-password">forgot password?</a> | <a id="sign-up">New user? Signup here</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -680,7 +697,7 @@
 
     <!-- BackboneJS -->
     <script src="vendor/js/underscore-min.js"></script>
-    <script src="vendor/js/backbone-min.js"></script>
+    <script src="vendor/js/backbone-min.js"></script>   
 
     <script type="text/javascript" src="js/backbone/views/userview.js"></script>
     <script type="text/javascript" src="js/backbone/routes.js"></script>

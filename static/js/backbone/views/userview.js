@@ -1,14 +1,23 @@
 jQuery(function() {
 	var UserList = Backbone.View.extend({
-		el: '.page',
+		el: '#bs-example-navbar-collapse',
 		initialize: function () {
 	        console.log('Login View Initialized');
 	    },
+	    events: {
+        	'click #sign-in':  'loadSigninDialog',
+    	},
 		render: function() {
-			this.$el.html ('CONTENT SHOULD SHOW HERE');
+			
+		},
+
+		loadSigninDialog: function() {
+			console.log ("Avinash")
+			$('#signin-modal').modal();
 		}
 	});
 
+	
 	if (!window.CB) {
     	window.CB = {};
   	}

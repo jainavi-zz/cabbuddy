@@ -869,3 +869,32 @@ body {
 .sign-in {
     background: none;
 }
+
+label {
+    font-weight: 300;
+}
+
+.cb-form-input {
+    font-weight: 300;
+    height: 45px;
+    padding: 0px 10px;
+    font-size: 20px;
+}
+
+.signin-modal-footer {
+    float: left;
+}
+
+.signin-modal-footer a {
+    color: #337ab7;
+    font-weight: 300;   
+    cursor: pointer;
+}
+
+.btn-cb {
+    border-radius: 0px;
+    font-family: sans-serif;
+    text-transform: none;
+    font-weight: 300;
+    font-size: 15px;
+}
